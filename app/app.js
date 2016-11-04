@@ -8,7 +8,5 @@ angular.module('templateStore', [
   'templateStore.templates'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
   $routeProvider.otherwise({redirectTo: '/templates'});
 }]);
