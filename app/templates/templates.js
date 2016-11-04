@@ -3,12 +3,21 @@
 angular.module('templateStore.templates', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/templates', {
+  $routeProvider
+  .when('/templates', {
     templateUrl: 'templates/templates.html',
     controller: 'TemplatesCtrl'
+  })
+  .when('/templates/:templateID', {
+    templateUrl: 'templates/template-details.html',
+    controller: 'TemplateDetailsCtrl'
   });
 }])
 
 .controller('TemplatesCtrl', [function() {
+
+}])
+
+.controller('TemplateDetailsCtrl', [function() {
 
 }]);
