@@ -14,10 +14,12 @@ angular.module('templateStore.templates', ['ngRoute'])
   });
 }])
 
-.controller('TemplatesCtrl', [function() {
-
+.controller('TemplatesCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('json/templates.json').success(function(data) {
+    $scope.templates = data;
+  });
 }])
 
-.controller('TemplateDetailsCtrl', [function() {
+.controller('TemplateDetailsCtrl', ['$scope', '$http', function($scope, $http) {
 
 }]);
